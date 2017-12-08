@@ -8,8 +8,8 @@ public class ConferenceRoom extends Room {
 
     double roomCost;
 
-    public ConferenceRoom(String hotelName, Integer capacity, ArrayList<Guest> guests, double roomCost) {
-        super(hotelName, capacity, guests);
+    public ConferenceRoom(Integer capacity, ArrayList<Guest> guests, double roomCost) {
+        super(capacity);
         this.roomCost = roomCost;
     }
 }

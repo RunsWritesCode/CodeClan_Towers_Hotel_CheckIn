@@ -1,11 +1,13 @@
 package Guests;
 
+import java.util.ArrayList;
+
 public class Guest {
 
     public String firstName;
     public String lastName;
     public double wallet;
-
+    ArrayList<Guest> guests;
 
     public Guest(String firstName, String lastName, double wallet) {
         this.firstName = firstName;
@@ -36,4 +38,12 @@ public class Guest {
     public void setWallet(double wallet) {
         this.wallet = wallet;
     }
+
+    public void add(Guest guest) {
+        this.guests.add(guest);
+    }
+
+
+
+
 }

@@ -8,4 +8,7 @@ public class Hotel {
     public Hotel(String name) {
         this.hotelName = name;
     }
+
+
+
 }

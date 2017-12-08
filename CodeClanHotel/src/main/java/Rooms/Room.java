@@ -1,21 +1,18 @@
 package Rooms;
 
 import Guests.Guest;
-import Hotel.Hotel;
 
 import java.util.ArrayList;
 
-public class Room extends Hotel {
+public class Room {
 
-    public Integer capacity;
+    private Integer capacity;
     private ArrayList<Guest> guests;
 
-    public Room(String hotelName, Integer capacity, ArrayList<Guest> guests) {
-        super(hotelName);
+    public Room(Integer capacity) {
         this.capacity = capacity;
-        this.guests = guests;
+        this.guests = new ArrayList<>();
     }
-
 
 
     public Integer getCapacity() {

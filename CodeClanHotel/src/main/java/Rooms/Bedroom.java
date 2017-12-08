@@ -8,11 +8,26 @@ public class Bedroom extends Room {
 
     private RoomType roomType;
     Integer roomNum;
+    ArrayList<Guest> guests;
+    double rate;
 
-    public Bedroom(String hotelName, Integer capacity, ArrayList<Guest> guests, RoomType roomType, Integer roomNum) {
-        super(hotelName, capacity, guests);
+
+
+    public Bedroom(Integer capacity, RoomType roomType, Integer roomNum, double rate) {
+        super(capacity);
         this.roomType = roomType;
         this.roomNum = roomNum;
+        this.guests = new ArrayList<>();
+        this.rate = rate;
+
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(Double rate) {
+        this.rate = rate;
     }
 
     public RoomType getRoomType() {
@@ -23,11 +38,30 @@ public class Bedroom extends Room {
         this.roomType = roomType;
     }
 
-    public Integer getRoomNum() {
+    public int getRoomNum() {
         return roomNum;
     }
 
-    public void setRoomNum(Integer roomNum) {
-        this.roomNum = roomNum;
+
+    public void addGuest(Guest guest) {
+        if( checkRoomAvailable() ) {
+            this.guests.add(guest);
+        }
+    }
+
+    public int countGuests() {
+        return this.guests.size();
+    }
+
+    public boolean checkRoomAvailable() {
+        if (this.guests.size() == 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
     }
 }
