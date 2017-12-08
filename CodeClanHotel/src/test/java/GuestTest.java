@@ -16,6 +16,7 @@ public class GuestTest {
         guest1 = new Guest("JK", "Rowling", 1000.00);
         guests = new ArrayList<>();
         guests.add(guest1);
+
     }
 
     @Test

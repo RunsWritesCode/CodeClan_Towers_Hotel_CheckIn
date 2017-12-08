@@ -34,7 +34,9 @@ public class HotelTest {
     }
 
     @Test
-    public void canTakePayment() {
+    public int canTakePayment() {
+        bedroom1.getRate();
+        assertEquals(44, hotel.getHotelTill());
 
     }
 
@@ -45,14 +47,16 @@ public class HotelTest {
     }
 
 
-//    @Test
-//    public void canCheckOutGuest () {
-//        bedroom1.removeGuest(guest1);
-//        hotel.takePayment(guest1);
-//        assertEquals(0, bedroom1.countGuests());
-//
-//
-////        assert that the hotel has taken payment
-//    }
+    @Test
+    public void canCheckOutGuest () {
+        bedroom1.removeGuest(guest1);
+//        this.takePayment(guest1);
+        assertEquals(0, bedroom1.countGuests());
+
+
+//        assert that the hotel has taken payment
+    }
+
+
 
 }
