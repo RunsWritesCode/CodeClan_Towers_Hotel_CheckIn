@@ -19,8 +19,8 @@ public class Hotel {
         this.hotelTill = hotelTill;
     }
 
-    private void takePayment(Room bedroom) {
-        this.hotelTill = hotelTill + Bedroom.rate;
+    private int takePayment(double rate) {
+        this.hotelTill = hotelTill + Rooms.Bedroom.getRate;
     }
 
 }

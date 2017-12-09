@@ -9,7 +9,7 @@ public class Bedroom extends Room {
     private RoomType roomType;
     Integer roomNum;
     ArrayList<Guest> guests;
-    double rate;
+    public double rate;
 
 
 

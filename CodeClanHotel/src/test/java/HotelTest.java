@@ -4,6 +4,7 @@ import Rooms.Room;
 import Rooms.RoomType;
 import org.junit.Before;
 import org.junit.Test;
+import Hotel.Hotel;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class HotelTest {
 
+    Hotel hotel;
     Room room;
     Bedroom bedroom1;
     Bedroom bedroom2;
@@ -18,12 +20,14 @@ public class HotelTest {
     Guest guest2;
     ArrayList<Guest> guests;
 
+
     @Before
     public void before() {
         guest1 = new Guest("JK", "Rowling", 1000.00);
         guests = new ArrayList<>();
         guests.add(guest1);
         bedroom1 = new Bedroom(2, RoomType.DOUBLE,4, 44.00);
+        hotel = new Hotel ("CodeClan Towers", 100);
 
     }
 
