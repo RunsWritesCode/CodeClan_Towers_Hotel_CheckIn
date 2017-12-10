@@ -1,5 +1,4 @@
 package Hotel;
-
 public class Hotel {
 
     public String hotelName;
@@ -19,8 +18,8 @@ public class Hotel {
         this.hotelTill = hotelTill;
     }
 
-    private int takePayment(double rate) {
-        this.hotelTill = hotelTill + Rooms.Bedroom.getRate;
-    }
+//    private int takePayment(double rate) {
+//        this.hotelTill = hotelTill + Bedroom.getRate;
+//    }
 
 }

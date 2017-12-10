@@ -6,10 +6,14 @@ import java.util.ArrayList;
 
 public class ConferenceRoom extends Room {
 
-    double roomCost;
+    double rate;
 
-    public ConferenceRoom(Integer capacity, ArrayList<Guest> guests, double roomCost) {
+    public ConferenceRoom(Integer capacity, ArrayList<Guest> guests, double rate) {
         super(capacity);
-        this.roomCost = roomCost;
+        this.rate = rate;
+    }
+
+    public double getRate() {
+        return this.rate;
     }
 }
